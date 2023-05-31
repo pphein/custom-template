@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Kleo Bootstrap Theme</title>
+    <title>Custom Bootstrap Theme</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CSS -->
     <link href="css/custom.css" rel="stylesheet" type="text/css" />
@@ -13,6 +13,10 @@
 </head>
 
 <body>
+    <section id="loading">
+        <div id="loading-content"></div>
+    </section>
+    
     <!--Navbar Start-->
     <nav class="navbar navbar-expand-lg fixed-top navbar-kleo normal-nav">
         <div class="container">
@@ -40,17 +44,33 @@
                     <li class="nav-item">
                         <a href="#contact" class="nav-link">Contact</a>
                     </li>
+                    <li class="nav-item">
+                        <a href="#gallery" class="nav-link">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                            Login
+                        </button>
+                          
+                    </li>
                 </ul>
             </div>
         </div>
+        <div class="theme-switch-wrapper">
+            <label class="theme-switch" for="checkbox">
+                <input type="checkbox" id="checkbox" />
+                <div class="slider round"></div>
+                
+            </label>
+       </div>
     </nav>
-    <!-- Navbar End -->
+    <!-- Navbar End --> 
 
     <!-- Header Start -->
     <section class="header-bg align-items-center position-relative d-flex" id="top">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-lg-6">
+                <!-- <div class="col-lg-6">
                     <div class="header-title">
                         <p class="highlight font-weight-bold size-16 text-uppercase header-small-title title mb-3 ml-1">
                             Bootstrap Theme</p>
@@ -61,8 +81,58 @@
                         <a href="" class="btn btn-primary ml-2">Learn More <span class="ml-2 right-icon"><i
                                     class="fas fa-arrow-right"></i></span></a>
                     </div>
+                </div> -->
+                <div class="col-lg-8">
+                    <div id="myHeaderCarousel" class="carousel slide" data-ride="carousel">
+                        <!-- Carousel indicators -->
+                        <!-- <ol class="carousel-indicators">
+                            <li data-target="#myHeaderCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#myHeaderCarousel" data-slide-to="1"></li>
+                            <li data-target="#myHeaderCarousel" data-slide-to="2"></li>
+                        </ol> -->
+                        <!-- Wrapper for carousel items -->
+                        <div class="carousel-inner">
+                            <div class="item carousel-item active">
+                                <p class="highlight font-weight-bold size-16 text-uppercase header-small-title title mb-3 ml-1">
+                                    Bootstrap Theme</p>
+                                <h1 class="font-weight-bold main-title mb-4">Bootstrap Design</h1>
+                                <p class="text-sub ml-2 mb-4 pb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                                    do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+                                <a href="" class="btn btn-primary ml-2">Learn More <span class="ml-2 right-icon"><i
+                                            class="fas fa-arrow-right"></i></span></a>
+                            </div>
+                            <div class="item carousel-item">
+                                <p class="highlight font-weight-bold size-16 text-uppercase header-small-title title mb-3 ml-1">
+                                    PHP Panda</p>
+                                <h1 class="font-weight-bold main-title mb-4">PHP From ZERO TO HERO</h1>
+                                <p class="text-sub ml-2 mb-4 pb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                                    do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+                                <a href="" class="btn btn-primary ml-2">Learn More <span class="ml-2 right-icon"><i
+                                            class="fas fa-arrow-right"></i></span></a>
+                            </div>
+                            <div class="item carousel-item">
+                                <p class="highlight font-weight-bold size-16 text-uppercase header-small-title title mb-3 ml-1">
+                                    Laravel Framework</p>
+                                <h1 class="font-weight-bold main-title mb-4">Lara Learn</h1>
+                                <p class="text-sub ml-2 mb-4 pb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                                    do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+                                <a href="" class="btn btn-primary ml-2">Learn More <span class="ml-2 right-icon"><i
+                                            class="fas fa-arrow-right"></i></span></a>
+                            </div>
+                        </div>
+                        <!-- Carousel controls -->
+                        <!-- <a class="carousel-control left carousel-control-prev" href="#myHeaderCarousel" data-slide="prev">
+                            <i class="fa fa-angle-left"></i>
+                        </a>
+                        <a class="carousel-control right carousel-control-next" href="#myHeaderCarousel" data-slide="next">
+                            <i class="fa fa-angle-right"></i>
+                        </a> -->
+                    </div>
                 </div>
-                <div class="col-lg-5">
+                <div class="col-lg-4">
                     <div class="mt-5 mt-lg-0">
                         <!-- <img src="images/header-2.jpg" alt="" class="img-fluid mx-auto d-block"> -->
                         <lottie-player src="https://assets2.lottiefiles.com/packages/lf20_ZSqxIVbhtx.json"
@@ -281,6 +351,97 @@
     </section>
     <!-- Testimonials End -->
 
+    <!-- Gallery Start -->
+    <section class="section" id="gallery">
+        <!-- <div class="container">
+
+            <h1 class="fw-light text-center text-lg-start mt-4 mb-0">Thumbnail Gallery</h1>
+        
+            <hr class="mt-2 mb-5">
+        
+            <div class="row text-center text-lg-start">
+                <div class="col-lg-3 col-md-4 col-6">
+                    <a href="#" class="d-block mb-4 h-100">
+                    <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/pWkk7iiCoDM/400x300" alt="">
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-6">
+                    <a href="#" class="d-block mb-4 h-100">
+                    <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/aob0ukAYfuI/400x300" alt="">
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-6">
+                    <a href="#" class="d-block mb-4 h-100">
+                    <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/EUfxH-pze7s/400x300" alt="">
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-6">
+                    <a href="#" class="d-block mb-4 h-100">
+                    <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/M185_qYH8vg/400x300" alt="">
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-6">
+                    <a href="#" class="d-block mb-4 h-100">
+                    <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/sesveuG_rNo/400x300" alt="">
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-6">
+                    <a href="#" class="d-block mb-4 h-100">
+                    <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/AvhMzHwiE_0/400x300" alt="">
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-6">
+                    <a href="#" class="d-block mb-4 h-100">
+                    <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/2gYsZUmockw/400x300" alt="">
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-6">
+                    <a href="#" class="d-block mb-4 h-100">
+                    <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/EMSDtjVHdQ8/400x300" alt="">
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-6">
+                    <a href="#" class="d-block mb-4 h-100">
+                    <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/8mUEy0ABdNE/400x300" alt="">
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-6">
+                    <a href="#" class="d-block mb-4 h-100">
+                    <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/G9Rfc1qccH4/400x300" alt="">
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-6">
+                    <a href="#" class="d-block mb-4 h-100">
+                    <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/aJeH0KcFkuc/400x300" alt="">
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-6">
+                    <a href="#" class="d-block mb-4 h-100">
+                    <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/p2TQ-3Bh3Oo/400x300" alt="">
+                    </a>
+                </div>            
+            </div>
+        
+        </div> -->
+        <div class="photo-gallery">
+            <div class="container">
+                <div class="intro">
+                    <h2 class="text-center">Lightbox Gallery</h2>
+                    <p class="text-center">Nunc luctus in metus eget fringilla. Aliquam sed justo ligula. Vestibulum nibh erat, pellentesque ut laoreet vitae. </p>
+                </div>
+                <div class="row photos">
+                    <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="images/c1.jpg" data-lightbox="photos"><img class="img-fluid" src="images/c1.jpg"></a></div>
+                    <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="images/c2.jpg" data-lightbox="photos"><img class="img-fluid" src="images/c2.jpg"></a></div>
+                    <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="images/c3.jpg" data-lightbox="photos"><img class="img-fluid" src="images/c3.jpg"></a></div>
+                    <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="images/c2.jpg" data-lightbox="photos"><img class="img-fluid" src="images/c2.jpg"></a></div>
+                    <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="images/c3.jpg" data-lightbox="photos"><img class="img-fluid" src="images/c3.jpg"></a></div>
+                    <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="images/c1.jpg" data-lightbox="photos"><img class="img-fluid" src="images/c1.jpg"></a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Gallery End -->
+
     <!-- Contact Start -->
     <section class="section" id="contact">
         <div class="container">
@@ -353,12 +514,49 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <p class="text-center white">2020 © Kleo. All Rights Reserved.</p>
+                    <p class="text-center white">2020 © Custom. All Rights Reserved.</p>
                 </div>
             </div>
         </div>
     </section>
     <!-- Footer End -->
+
+    <!-- Login Modal -->
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Login Form</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                      <label for="exampleInputEmail1" class="form-label">Email address</label>
+                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="exampleInputPassword1" class="form-label">Password</label>
+                      <input type="password" class="form-control" id="exampleInputPassword1">
+                    </div>
+                    <div class="mb-3 form-check">
+                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+            <!-- <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+            </div> -->
+        </div>
+        </div>
+    </div>
 
     <!-- JS -->
     <script src="js/jquery.min.js"></script>
@@ -366,6 +564,46 @@
     <script src="js/scrollspy.min.js"></script>
     <script src="js/jquery.easing.min.js"></script>
     <script src="js/script.js"></script>
+    <script>
+        const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+        const currentTheme = localStorage.getItem('theme');
+
+        if (currentTheme) {
+            document.documentElement.setAttribute('data-theme', currentTheme);
+        
+            if (currentTheme === 'dark') {
+                toggleSwitch.checked = true;
+            }
+        }
+
+        function switchTheme(e) {
+            if (e.target.checked) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+            }
+            else {        document.documentElement.setAttribute('data-theme', 'light');
+                localStorage.setItem('theme', 'light');
+            }    
+        }
+
+        toggleSwitch.addEventListener('change', switchTheme, false);
+
+        // Loading spin
+        function showLoading() {
+            document.querySelector('#loading').classList.add('loading');
+            document.querySelector('#loading-content').classList.add('loading-content');
+          }
+          
+          function hideLoading() {
+            document.querySelector('#loading').classList.remove('loading');
+            document.querySelector('#loading-content').classList.remove('loading-content');
+          }
+    </script>
+
+    <!-- Gallery JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script>
 </body>
 
 </html>
